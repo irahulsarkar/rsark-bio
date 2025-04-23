@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R SARK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <nav class="fixed-nav">
+        <div class="container">
+            <a href="#" class="logo">RS</a>
+            <button class="hamburger" id="hamburger-btn">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" class="checkbox" id="darkModeToggle">
+                <label class="label" for="darkModeToggle">
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px;">
+                <div id="datetime-container" style="color:#555; font-size: 0.9rem;"></div>
+                <div id="moonphase-container"></div>
+            </div>
+            <div id="hello-text" class="hello-text">👋</div> 
+
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="Your Profile Picture" class="profile-image">
+            </div>
+            <h1><span class="accent-letter">R</span>AHUL <span class="accent-letter">S</span>ARKAR</h1>
+            <div id="location-info" style="font-size: 0.75rem; color: #e70000;">Bengaluru, India</div>
+            <p class="tagline">Entrepreneur | Web Developer | Pharmacist.</p>
+            <div class="social-links">
+                <a href="https://github.com/irahulsarkar" target="_blank" data-platform="GitHub"><i class="fab fa-github"></i><span class="social-name"></span></a>
+                <a href="https://www.linkedin.com/in/rahhulsark/" target="_blank" data-platform="LinkedIn"><i class="fab fa-linkedin"></i><span class="social-name"></span></a>
+                <a href="https://open.spotify.com/user/rahulsarkar?si=PXjm9R7oTVaR55yuwntK8g" target="_blank" data-platform="Spotify"><i class="fab fa-spotify"></i><span class="social-name"></span></a>
+                <a href="https://steamcommunity.com/id/rahulsarkar/" target="_blank" data-platform="Steam"><i class="fab fa-steam"></i><span class="social-name"></span></a>
+                <a href="https://instagram.com/rahhulsark" target="_blank" data-platform="Instagram"><i class="fab fa-instagram"></i><span class="social-name"></span></a>
+                <a href="https://discord.gg/WmGJQJzN" target="_blank" data-platform="Discord"><i class="fab fa-discord"></i><span class="social-name"></span></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2><span class="accent-letter">S</span>kills</h2>
+            <div class="skills-list">
+                <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+                <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2><span class="accent-letter">P</span>rojects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <iframe src="https://irahulsarkar.github.io/quik/" style="width: 100%; height: 200px; border: none; border-radius: 8px;"></iframe>
+                    <h3>Quik Invoice</h3>
+                    <p>A GST compliant Invoice Generator.</p>
+                    <a href="https://irahulsarkar.github.io/quik/">View Project</a>
+                    <div class="built-with">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv" class="cv-section">
+        <div class="container">
+            <h2>CV</h2>
+            <div class="cv-content">
+                <p>Download my CV: <a href="[Your CV Link]" target="_blank">Download</a></p>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="intro__contact">
+                <span>  Get in touch  </span>
+                <span class="emoji ponter"></span>
+                <span><a href="mailto:irahulsarkar@gmail.com" target="_blank" class="highlight-link">irahulsarkar@gmail.com</a></span>
+            </h2>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            © 2025 Rahul Sarkar. All rights reserved.
+        </div>
+    </footer>
+    <div id="theme-message" class="theme-message"></div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({
+    reset: false,
+    distance: '40px',
+    duration: 1250,
+    easing: 'ease-in-out',
+});
+
+ScrollReveal().reveal('.hero h1, .hero p, .hero .social-links', { delay: 300, origin: 'bottom' });
+ScrollReveal().reveal('.skills-section h2, .skills-list', { delay: 300, origin: 'top' });
+ScrollReveal().reveal('.project-card', { delay: 300, origin: 'top', interval: 100});
+ScrollReveal().reveal('.cv-section h2, .cv-content', { delay: 300, origin: 'top' });
+ScrollReveal().reveal('.contact-section h2, .contact-form', { delay: 300, origin: 'top' });
+
+    </script>
+    
+</body>
+</html>
